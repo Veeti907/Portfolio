@@ -1,0 +1,123 @@
+/* ===============================
+   NAVBAR BASE
+================================ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.5rem 2.0rem;
+
+  background: var(--navbar-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+
+  transition: background var(--transition),
+              border var(--transition);
+}
+
+/* ===============================
+   LOGO
+================================ */
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition);
+  margin-left: 30px;
+}
+
+.logo:hover {
+  color: var(--accent);
+}
+
+/* ===============================
+   NAV LINKS
+================================ */
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+/* Hover color */
+.nav-item:hover {
+  color: var(--text-primary);
+}
+
+/* Animated underline */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Active link */
+.nav-item.active {
+  color: var(--accent);
+}
+
+.nav-item.active::after {
+  width: 100%;
+}
+
+/* ===============================
+   THEME TOGGLE
+================================ */
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: transform var(--transition),
+              color var(--transition);
+}
+
+.theme-toggle:hover {
+  transform: rotate(25deg);
+  color: var(--accent);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+}

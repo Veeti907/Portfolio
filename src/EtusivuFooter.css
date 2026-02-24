@@ -1,0 +1,43 @@
+/* ===============================
+   FOOTER BASE
+================================ */
+
+.site-footer {
+  width: 100%;
+  margin-top: auto;
+
+  /* Teeman mukaan sulautuva tausta */
+  background: var(--footer-bg);
+  padding: 2.5rem 1rem 1.5rem;
+  text-align: center;
+  color: var(--footer-text);
+  transition: background var(--transition), color var(--transition);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+}
+
+/* Kevyt erotin */
+.footer-divider {
+  opacity: 0.4;
+  border-left: 1px solid currentColor;
+  height: 12px;
+}
+@media (max-width: 480px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-divider {
+    display: none;
+  }
+}

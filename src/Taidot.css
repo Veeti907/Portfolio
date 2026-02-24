@@ -1,0 +1,182 @@
+/* ============================= */
+/* Perustausta */
+/* ============================= */
+
+.skills-page {
+  padding: 5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: var(--page-bg);
+  min-height: 100vh;
+}
+
+.skills-container {
+  background: var(--card-bg);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  transition: background var(--transition);
+}
+
+/* ============================= */
+/* Otsikko */
+/* ============================= */
+
+.skills-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.sosial-title {
+  margin-top: 20px;
+}
+
+.sosial-skills {
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+  color: var(--text-secondary);
+}
+
+/* ============================= */
+/* Kategoriat */
+/* ============================= */
+
+.skills-category {
+  margin-bottom: 4rem;
+}
+
+.skills-category h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* ============================= */
+/* Grid */
+/* ============================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.8rem;
+  justify-items: center;
+}
+
+/* ============================= */
+/* Kortit */
+/* ============================= */
+
+.skill-card {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  padding: 1.2rem 1rem;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: default;
+  transition: all var(--transition);
+  min-width: 120px;
+  max-width: 200px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transform: perspective(600px) rotateX(0deg);
+}
+
+/* Hover animaatio */
+.skill-card:hover {
+  background: var(--card-hover);
+  transform: perspective(600px) rotateX(6deg) translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================= */
+/* Tekniset taidot */
+/* ============================= */
+
+.skill-card.tech {
+  background: var(--card-bg);
+}
+
+.skill-card.tech h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1em;
+}
+
+.skill-bar {
+  background: rgba(100, 108, 255, 0.2); /* voidaan halutessa tehdä muuttujaksi */
+  height: 6px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+/* ============================= */
+/* Sosiaaliset taidot */
+/* ============================= */
+
+.skill-card.soft {
+  background: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+}
+
+.soft-icon {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+}
+
+/* ============================= */
+/* Muut taidot */
+/* ============================= */
+
+.skill-card.other {
+  background: var(--card-bg);
+}
+
+/* ============================= */
+/* Responsiivisuus */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .skills-page {
+    padding: 3rem 1rem;
+  }
+
+  .skills-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .skills-category h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .skill-card {
+    min-width: 100px;
+    max-width: 160px;
+    font-size: 0.85rem;
+    padding: 1rem 0.8rem;
+  }
+
+  .soft-icon {
+    font-size: 1.6rem;
+  }
+}

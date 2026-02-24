@@ -1,0 +1,235 @@
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--page-bg);
+}
+
+.projects-container {
+  flex: 1;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* TITLES */
+
+.projects-title {
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.projects-subtitle {
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* GRID */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD */
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-strong);
+  background: var(--card-hover);
+}
+
+/* IMAGE */
+
+.project-image {
+  cursor: zoom-in;
+}
+
+.project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform var(--transition);
+}
+
+.project-image:hover img {
+  transform: scale(1.03);
+}
+
+/* CONTENT */
+
+.project-content {
+  padding: 1.8rem;
+  text-align: left;
+}
+
+.project-title {
+  margin: 0 0 0.6rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* TECH */
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-badge {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background var(--transition);
+}
+
+/* BUTTONS */
+
+.project-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.55rem 0;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+/* PRIMARY */
+
+.btn.primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+
+.btn.primary:hover {
+  background: var(--btn-primary-hover);
+}
+
+/* SECONDARY */
+
+.btn.secondary {
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--btn-secondary-text);
+}
+
+.btn.secondary:hover {
+  background: var(--btn-secondary-hover-bg);
+  color: var(--btn-secondary-hover-text);
+}
+
+/* MODAL */
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: var(--modal-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+  opacity: 0;
+}
+
+.image-modal.opening {
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+.image-modal.closing {
+  animation: modalFadeOut 0.3s ease forwards;
+}
+
+.modal-close {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: var(--modal-close-bg);
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  padding: 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.modal-close:hover {
+  background: var(--modal-close-hover);
+  transform: scale(1.1);
+}
+
+.image-modal-content {
+  max-width: 95%;
+  max-height: 90%;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  cursor: zoom-out;
+  animation: zoomIn 0.25s ease;
+  touch-action: pinch-zoom;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding-top: 5rem;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .project-image img {
+    height: 180px;
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes modalFadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.95); }
+}

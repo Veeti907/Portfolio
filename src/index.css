@@ -1,0 +1,161 @@
+:root {
+  /* ===== COLORS ===== */
+--footer-bg: linear-gradient(to bottom, rgba(15,15,20,0), rgba(30,30,40,0.9));
+  --footer-text: rgba(255,255,255,0.65);
+
+--contact-card-bg: rgba(255, 255, 255, 0.05);
+  --contact-card-border: rgba(255, 255, 255, 0.08);
+  --contact-card-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+
+  --contact-icon: var(--accent);
+  --contact-link: var(--accent);
+
+  --hero-bg: var(--page-bg);
+
+  --hero-title: var(--text-primary);
+  --hero-subtitle: var(--text-secondary);
+
+  --btn-primary-bg: var(--accent);
+  --btn-primary-hover: var(--accent-hover);
+  --btn-primary-text: #ffffff;
+
+  --btn-secondary-bg: var(--card-hover);
+  --btn-secondary-hover: var(--card-bg);
+  --btn-secondary-text: var(--text-primary);
+
+  --about-bg: rgba(255, 255, 255, 0.05);
+  --about-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+  --hero-image-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  --page-bg: linear-gradient(180deg, #0f0f14, #181824);
+
+  --text-primary: #ffffff;
+  --text-secondary: #b5b5c3;
+
+  --card-bg: #1e1e2a;
+  --card-hover: #252536;
+
+  --navbar-bg: rgba(20, 20, 30, 0.7);
+
+  --accent: #646cff;
+  --accent-hover: #535bf2;
+
+  /* ===== BUTTONS ===== */
+  --btn-bg: #1e1e2a;
+  --btn-text: #ffffff;
+  --btn-border-hover: var(--accent);
+
+  /* ===== TRANSITIONS ===== */
+  --transition: 0.3s ease;
+
+  /* ===== TYPOGRAPHY ===== */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================= LIGHT MODE ================= */
+
+[data-theme='light'] {
+--footer-bg: linear-gradient(to bottom, rgba(255,255,255,0), rgba(240,240,245,0.95));
+  --footer-text: rgba(0,0,0,0.55);
+
+  --contact-card-bg: rgba(0, 0, 0, 0.03);
+  --contact-card-border: rgba(0, 0, 0, 0.08);
+  --contact-card-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+--about-bg: rgba(255, 255, 255, 0.9);
+  --about-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  --page-bg: linear-gradient(180deg, #ffffff, #ececf3);
+
+  --text-primary: #1a1a1a;
+  --text-secondary: #555555;
+
+  --card-bg: #ffffff;
+  --card-hover: #f3f3f8;
+
+  --navbar-bg: rgba(255, 255, 255, 0.7);
+
+  --accent: #646cff;
+  --accent-hover: #535bf2;
+
+  --btn-bg: #ffffff;
+  --btn-text: #1a1a1a;
+  --btn-border-hover: var(--accent);
+}
+
+/* ================= GLOBAL RESET ================= */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+/* ================= BODY ================= */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text-primary);
+
+  transition: background var(--transition),
+              color var(--transition);
+}
+
+/* ================= LINKS ================= */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* ================= HEADINGS ================= */
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* ================= BUTTON ================= */
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  cursor: pointer;
+  transition: border-color var(--transition),
+              background var(--transition),
+              color var(--transition);
+}
+
+button:hover {
+  border-color: var(--btn-border-hover);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

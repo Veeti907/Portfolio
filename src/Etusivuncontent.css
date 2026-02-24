@@ -1,0 +1,44 @@
+.content-container-etusivu {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center; /* keskittää kaiken sisällön */
+}
+
+/* Header-kuva Navbarin ja About Me:n välissä */
+.header-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;  /* väli About Me:n yläpuolella */
+  width: 100%;
+}
+
+.header-image {
+  width: 200px;          /* desktop leveys */
+  max-width: 60%;        /* mobiilissa skaalautuu */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* About Me teksti */
+.about-text p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin: 0 auto;
+  max-width: 700px; /* ei veny liian leveäksi */
+}
+
+/* Mobiili */
+@media (max-width: 768px) {
+  .header-image {
+    width: 140px;      /* pienempi kuva mobiilissa */
+    margin-bottom: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
