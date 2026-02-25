@@ -1,73 +1,104 @@
-# React + TypeScript + Vite
+🚀 Veeti Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Moderni ja responsiivinen developer-portfolio, rakennettu Reactilla ja TypeScriptilla.
+Sisältää dark/light theme -järjestelmän, reitityksen ja modernin UI-designin.
 
-Currently, two official plugins are available:
+✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌗 Dark / Light mode toggle
 
-## React Compiler
+⚡ React Router v6 navigointi
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🎨 CSS variable -pohjainen design system
 
-## Expanding the ESLint configuration
+💎 Modern glass navbar
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📱 Täysin responsiivinen layout
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🎬 Smooth hover- ja fade-animaatiot
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🧩 Modulaarinen komponenttirakenne
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🧠 TypeScript-tyypitetty
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🛠 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+React
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+TypeScript
+
+React Router
+
+CSS (Custom Properties / Design System)
+
+Bootstrap (layout utilities)
+
+📂 Sivut
+
+/ – Etusivu (Hero + About)
+
+/projektit – Projektit
+
+/taidot – Osaaminen
+
+/contact – Yhteystiedot
+
+🎨 Theme System
+
+Projekti käyttää CSS-muuttujia teemojen hallintaan:
+
+:root = Dark mode (default)
+
+[data-theme='light'] = Light mode
+
+Teeman vaihto:
+
+document.documentElement.setAttribute('data-theme', theme)
+
+
+Kaikki värit, varjot ja taustat ovat muuttujapohjaisia → ei kovakoodattuja värejä.
+
+📦 Asennus
+git clone https://github.com/Veeti907/portfolio
+cd portfolio
+npm install
+npm run dev
+
+📁 Projektirakenne
+src/
+│
+├── Navbar.tsx
+├── Footer.tsx
+├── Home.tsx
+├── Projektit.tsx
+├── Taidot.tsx
+├── Contact.tsx
+├── Etusivucontent.tsx
+├── Layout.tsx
+├── App.tsx
+└── index.css
+
+🎯 Tavoite
+
+Tämän projektin tarkoitus on:
+
+Esitellä frontend-osaamista
+
+Demonstroida modernia UI-rakennetta
+
+Näyttää TypeScript-osaaminen
+
+Toimia työnhaun portfoliona
+
+📌 Tulevat parannukset
+
+📩 Toimiva contact form (email integration)
+
+📊 Projektikortit animaatioilla
+
+🚀 Deployment (Vercel / Netlify)
+
+👤 Author
+
+Veeti
+Frontend Developer
