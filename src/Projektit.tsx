@@ -19,9 +19,9 @@ const projects = [
     description:
       'Henkilökohtainen portfolio, jossa esittelen taitoni, projektini ja yhteystietoni modernilla ja responsiivisella tavalla.',
     tech: ['React', 'TypeScript', 'CSS'],
-    image: '/portfolio-projekti2.png',
+    image: '/portfolio-projekti2NEW.png',
     demoLink: '#',
-    githubLink: '#',
+    githubLink: 'https://github.com/Veeti907/Portfolio',
   },
 ]
 
